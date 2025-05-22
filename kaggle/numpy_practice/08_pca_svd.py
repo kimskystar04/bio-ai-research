@@ -7,6 +7,7 @@ np.random.seed(42)
 mean = [0, 0]
 cov = [[3, 1], [1, 2]]  # 상관관계 있는 2차원 데이터
 X = np.random.multivariate_normal(mean, cov, 200)
+np.set_printoptions(linewidth=100,suppress=True)
 print(X)
 # 2. 평균 중심화
 X_centered = X - np.mean(X, axis=0)
