@@ -7,7 +7,7 @@ b = np.array([[1, 2, 3], [4, 5, 6]])
 
 # 기본 정보
 print("a.shape:", a.shape)
-print("b.ndim:", b.ndim) #span하는 차원이 아니라 구조적 배열의 공간을 말하는거 살짝 선대랑 다른 포인트!
+print("b.ndim:", b.ndim) #span하는 차원이 아니라 구조적 배열의 공간을 말하는 거 살짝 선대랑 다른 포인트!
 print("b.dtype:", b.dtype)
 
 # 배열 구조 변경
