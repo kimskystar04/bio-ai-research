@@ -71,4 +71,17 @@ print(A_recon)
 print("\n원래 A와 복원된 A의 차이 (오차):")
 print(A - A_recon)
 
-
+"""
+import numpy as np
+from scipy.linalg import eigh, det
+A = np.array([[2,-1,0],[-1,2,-1],[0,-1,2]])
+vals, vecs = eigh(A)
+s_eval = sorted(vals)
+orthonormal_check = np.allclose(vecs.T @ vecs, np.eye(3))
+print("정규직교성 만족?:", orthonormal_check)
+j =  0
+for i in range(len(vals)):
+    if np.allclose(det(A-vals[i]*np.eye(3)),0) == True:
+      j += 1
+      print(f"현재까지 참인 고윳값{j}개 입니다.")
+"""
