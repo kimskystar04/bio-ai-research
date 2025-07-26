@@ -33,8 +33,9 @@ for epoch in range(1000):
         print(f"Epoch {epoch:03}: Loss = {loss.item():.4f}")
 
 # 테스트
-test_input = torch.tensor([[1.5]])
+testing = float(input())
+test_input = torch.tensor([[testing]])
 with torch.no_grad():
     pred = model(test_input)
-    print(f"\n입력 1.5에 대한 예측 확률: {pred.item():.4f}")
+    print(f"\n입력에 대한 예측 확률: {pred.item():.4f}")
     print("클래스 예측:", int(pred.item() > 0.5))
